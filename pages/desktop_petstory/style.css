@@ -1,0 +1,120 @@
+:root {
+  --intro-bg-image: url("../../assets/images/giant-panda-1x.png");
+
+  --container-bg-color: #ffffff;
+  --header-bg-color: #000000;
+
+  --br-color: #ffffff;
+
+  --txt-color: #ffffff;
+
+  --inter-regular-font-url: url("../../assets/fonts/Inter/static/Inter-Regular.ttf");
+  --poppins-regular-font-url: url("../../assets/fonts/Poppins/Poppins-Regular.ttf");
+}
+
+/* || Typography */
+
+/* Google provides Inter and Poppins instead Roboto */
+
+@font-face {
+  font-family: "Inter";
+  src: var(--inter-font-url);
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: var(--poppins-regular-font-url);
+}
+
+/* || UTILITIES */
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.border-box {
+  box-sizing: border-box;
+}
+
+.border-1 {
+  border: 1px solid var(--br-color);
+  border-radius: 2px;
+}
+
+.no-bullets {
+  list-style-type: none;
+}
+
+/* || SITEWIDE */
+
+.container {
+  max-width: 1600px;
+  max-height: 4975px;
+
+  background-color: var(--container-bg-color);
+}
+
+/* || HEADER */
+
+.header {
+  width: 100%;
+  height: 80px;
+}
+
+.logo {
+  order: 1;
+
+  width: 82px;
+  height: 52px;
+}
+
+.menu {
+  order: 2;
+}
+
+.about,
+.map,
+.zoos,
+.donate,
+.contact {
+  height: 22px;
+}
+
+.about {
+  width: 43px;
+}
+
+.map {
+  width: 32px;
+}
+
+.zoos {
+  width: 36px;
+}
+
+.donate {
+  width: 51px;
+}
+
+.contact {
+  width: 78px;
+}
+
+.figma {
+  order: 3;
+
+  width: 105px;
+}
+
+/* || INTRO */
+
+.intro {
+  height: 780px;
+
+  background-image: var(--intro-bg-image);
+}
