@@ -3,9 +3,9 @@ import {
   friendFeedBtn,
   emailInput,
   submitInput,
-} from "./modules/querySelectors.js";
+} from "../../modules/querySelectors.js";
 
-import { isValidEmail } from "./modules/isValidEmail.js";
+import { isValidEmail } from "../../modules/isValidEmail.js";
 
 friendFeedBtn.addEventListener("click", () =>
   window.open("../desktop_donate/index.html")
