@@ -1,24 +1,24 @@
-document
-  .querySelector(".friend-feed-button")
-  .addEventListener("click", () => window.open("../desktop_donate/index.html"));
+import {
+  donateBtn,
+  friendFeedBtn,
+  emailInput,
+  submitInput,
+} from "./modules/querySelectors.js";
 
-document
-  .querySelector(".donate-button")
-  .addEventListener("click", () => window.open("../desktop_donate/index.html"));
+import { isValidEmail } from "./modules/isValidEmail.js";
 
-const isValidEmail = (email) => {
-  const re = /\S+@\S+\.\S+/;
+friendFeedBtn.addEventListener("click", () =>
+  window.open("../desktop_donate/index.html")
+);
 
-  return re.test(email);
-};
+donateBtn.addEventListener("click", () =>
+  window.open("../desktop_donate/index.html")
+);
 
-let em = document.querySelector("#email");
-let submitEmailBtn = document.querySelector(".submit");
+emailInput.addEventListener("input", (event) => {
+  emailInput.value = event.target.value;
 
-em.addEventListener("input", (event) => {
-  em.value = event.target.value;
-
-  isValidEmail(em.value)
-    ? submitEmailBtn.setAttribute("disabled", true)
-    : submitEmailBtn.removeAttribute("disabled");
+  isValidEmail(emailInput.value)
+    ? submitInput.setAttribute("disabled", true)
+    : submitInput.removeAttribute("disabled");
 });
